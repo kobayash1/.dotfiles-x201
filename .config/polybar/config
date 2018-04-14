@@ -368,4 +368,33 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
+[module/battery]
+type = internal/battery
+full-at = 98
+battery = BAT0
+adapter = AC
+poll-interval = 5
+format-charging = <animation-charging> <label-charging>
+format-charging-padding = 1
+format-charging-background = ${colors.background}
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 1
+format-discharging-background = ${colors.background}
+format-full-padding = 1
+format-full-background = ${colors.background}
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = Full
+animation-charging-framerate = 750
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+
 ; vim:ft=dosini

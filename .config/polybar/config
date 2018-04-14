@@ -46,8 +46,8 @@ font-1 = Noto Sans CJK TC,Noto Sans CJK TC Thin:size=10;1
 font-2 = Font Awesome 5 Free:style=Solid:size=9;1
 
 modules-left = i3 music
-modules-center = xwindow
-modules-right = archupdates cpu actualtemp weather datecal redshift
+modules-center = date
+modules-right = archupdates cpu actualtemp wlan battery redshift
 
 tray-position = right
 tray-padding = 1
@@ -187,21 +187,23 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp6s0
+interface = wlp2s0
 interval = 60
 
 format-connected = <label-connected>
-label-connected = %local_ip%
+label-connected = %essid% | %local_ip%
 format-connected-prefix = " "
+format-connected-background = ${colors.background}
+format-connected-padding = 1
 
 format-disconnected =
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+# ramp-signal-0 = 
+# ramp-signal-1 = 
+# ramp-signal-2 = 
+# ramp-signal-3 = 
+# ramp-signal-4 = 
+# ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
@@ -219,15 +221,17 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = ""
-date-alt = "%a %Y-%m-%d"
+date = "%B %d"
+# date-alt = "%a %Y-%m-%d"
 
 time = %H:%M
-time-alt = %H:%M
+# time-alt = %H:%M
 
 format-prefix-foreground = ${colors.foreground-alt}
+format-background = ${colors.background}
+format-padding = 1
 
-label = %date% %time%
+label = %time% | %date%
 
 [module/datecal]
 type = custom/script
@@ -327,7 +331,7 @@ format = <label>°C
 format-padding = 1
 format-background = ${colors.background}
 interval = 2
-exec = "cat /sys/devices/platform/coretemp.0/hwmon/hwmon?/temp1_input | rev | cut -c 4- | rev"
+exec = "cat /sys/devices/platform/coretemp.0/hwmon/hwmon?/temp2_input | rev | cut -c 4- | rev"
 
 [module/weather]
 type = custom/script

@@ -231,7 +231,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-background = ${colors.background}
 format-padding = 1
 
-label = %time% | %date%
+label = %time% | %{A1:gsimplecal:}%date%%{A}
 
 [module/datecal]
 type = custom/script

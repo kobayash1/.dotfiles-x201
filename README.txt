@@ -1,1 +1,1 @@
-All my important dotfiles and a very crude installer script.
+Dot files for ThinkPad x201 and a very crude installer script.

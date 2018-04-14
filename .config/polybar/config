@@ -191,7 +191,7 @@ interface = wlp2s0
 interval = 60
 
 format-connected = <label-connected>
-label-connected = %essid% | %local_ip%
+label-connected = %essid%
 format-connected-prefix = " "
 format-connected-background = ${colors.background}
 format-connected-padding = 1

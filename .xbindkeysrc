@@ -20,3 +20,7 @@
 
 "amixer set Master toggle"
 	XF86AudioMute
+
+# Fake work
+"/home/kobayashi/Scripts/work"
+	XF86Launch1

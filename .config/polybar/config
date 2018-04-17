@@ -174,9 +174,11 @@ icon-prev-padding = 1
 type = internal/cpu
 interval = 2
 label-background = ${colors.background}
-format-prefix = "  "
+# format-prefix = "  "
+format-prefix = ""
+format-prefix-padding = 1
 label = %percentage%%
-label-padding = 1
+label-padding-right = 1
 format-prefix-background = ${colors.background}
 
 [module/memory]
@@ -334,12 +336,13 @@ exec = "~/.config/polybar/getip.sh wlp6s0"
 
 [module/actualtemp]
 type = custom/script
+interval = 2
 background = ${colors.background}
-format-prefix = " "
 format = <label>°C
+format-prefix = ""
+format-prefix-padding-right = 1
 format-padding = 1
 format-background = ${colors.background}
-interval = 2
 exec = "cat /sys/devices/platform/coretemp.0/hwmon/hwmon?/temp2_input | rev | cut -c 4- | rev"
 
 [module/weather]
@@ -362,12 +365,13 @@ click-left = /home/kobayashi/Scripts/redshifttoggle
 [module/archupdates]
 type = custom/script
 interval = 3600
-format-background = ${colors.background}
-format-prefix-background = ${colors.background}
-format-prefix = " "
-format-padding = 1
 format = <label>
+format-background = ${colors.background}
+format-prefix = ""
+format-prefix-background = ${colors.background}
+format-prefix-padding = 1
 label = %output%
+label-padding-right = 1
 exec = sleep 2 && checkupdates | wc -l
 
 [settings]

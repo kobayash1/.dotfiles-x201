@@ -12,10 +12,10 @@
 	XF86AudioPlay
 
 # Volume control
-"amixer set Master 2%+"
+"amixer set Master 1%+"
 	XF86AudioRaiseVolume
 
-"amixer set Master 2%-"
+"amixer set Master 1%-"
 	XF86AudioLowerVolume
 
 "amixer set Master toggle"

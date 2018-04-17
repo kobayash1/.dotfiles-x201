@@ -45,7 +45,7 @@ font-0 = Hack:size=10;1
 font-1 = Noto Sans CJK TC,Noto Sans CJK TC Thin:size=10;1
 font-2 = Font Awesome 5 Free:style=Solid:size=9;1
 
-modules-left = i3 music
+modules-left = i3 volume music
 modules-center = date
 modules-right = archupdates cpu actualtemp wlan battery redshift
 
@@ -163,7 +163,7 @@ format-online = %{A1:mpc prev:}%{A2:mpc toggle:}%{A3:mpc next:}<icon-prev>%{A}%{
 label = "%output:0:45:...%"
 label-song = %title%
 label-song-background = ${colors.background}
-label-song-padding = 1
+label-song-padding-right = 1
 
 icon-prev = 
 icon-prev-background = ${colors.background}
@@ -245,13 +245,22 @@ format = %{A1:gsimplecal:}<label>%{A}
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+format-volume = <label-volume>
+format-volume-background = ${colors.background}
+format-volume-prefix = 
+format-volume-prefix-padding = 1
+format-volume-prefix-background = ${colors.background}
+label-volume = %percentage%%
+label-volume-padding-right = 1
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.background}
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+format-muted-prefix =  
+format-muted-prefix-padding = 1
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.background}
+label-muted = Mute
+label-muted-padding-right = 1
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55

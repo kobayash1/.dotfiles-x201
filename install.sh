@@ -14,7 +14,6 @@ ln -sv ~/.dotfiles-x201/.config/mpv/* ~/.config/mpv/
 ln -sv ~/.dotfiles-x201/.config/polybar/* ~/.config/polybar/
 ln -sv ~/.dotfiles-x201/.config/termite/* ~/.config/termite/
 ln -sv ~/.dotfiles-x201/.config/redshift.conf ~/.config/
-ln -sv ~/.dotfiles-x201/.config/rofi/* ~/.config/rofi/
 ln -sv ~/.dotfiles-x201/.irssi/* ~/.irssi/
 cp ~/.dotfiles-x201/.config/gsimplecal/* ~/.config/gsimplecal/
 cp ~/.dotfiles-x201/.config/mpdnotify.conf ~/.config/

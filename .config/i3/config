@@ -209,3 +209,6 @@ exec --no-startup-id termite -t ">_"
 # exec --no-startup-id "dunst"
 # Less is more theme
 exec --no-startup-id "dunst -config /home/kobayashi/.config/dunst/lessismore"
+
+# Use qutebrowser
+bindsym $mod+q exec qutebrowser /home/kobayashi/.dotfiles-x201/homepage/index.html
